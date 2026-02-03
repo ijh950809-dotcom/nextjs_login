@@ -1,9 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 
-function Header(props) {
+function Header() {
 
   //1.상태변수 선언
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -24,7 +24,7 @@ function Header(props) {
       <nav>
         {isLoggedIn ? (
           <>
-            <Link href='../login'>로그아웃</Link></>
+            <Link href='../logout'>로그아웃</Link></>
         ) : (
           <>
             <Link href='../login'>로그인</Link>&#10072; &nbsp;
