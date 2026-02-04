@@ -5,9 +5,68 @@ header {
   height: 50px;
 }
 
+header>.logo_icon {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
 header>h1 {
   text-align: center;
 }
+
+header i.fa-bars {
+  padding-right: 20px;
+}
+
+header i.fa-user {
+  padding-left: 20px;
+}
+
+.toggle_nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  background: rgba(0, 0, 0, .7);
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: 15px;
+  transition: 0.5s;
+}
+
+.toggle_nav nav a {
+  color: #fff;
+  position: absolute;
+  top: 35%;
+  left: 20%;
+}
+
+.toggle_nav nav a:last-child {
+  color: #fff;
+  position: absolute;
+  top: 35%;
+  left: 30%;
+}
+
+.toggle_menu {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+
+.toggle_menu>li {
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
 
 main {
   padding: 20px 0px;
