@@ -1,84 +1,100 @@
 @charset "utf-8";
 
 /* 레이아웃 공통서식 */
-header {
-  height: 50px;
+header{
+  width:100%;
+  height:50px;
+  background:rgba(0, 0, 0);
+  position:fixed;
+  z-index:1000;
+  position:relative;
 }
-
-header>.logo_icon {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
+header > h1{text-align:center;padding-top:4px;}
+header i.fas, header i.fa-solid{
+  position:absolute;top:14px;font-size:24px;color:#fff;
 }
+header i.fa-bars{right:10px;}
+header i.fa-user{left:10px;}
+header i.fa-times{left:10px;}
+header i.fa-arrow-right-from-bracket{left:10px;}
 
-header>h1 {
+/* 내비게이션 서식 */
+header nav{
+  position:fixed;top:0px;left:100%;
+  width:100%;height:100vh;
+  background:rgba(0,0,0,.8);
+  z-index:2000;
+  transition:0.5s;
+}
+header nav ul{
+  padding-top:100px;
+  display:flex;
+  justify-content: space-around;
+  flex-wrap:wrap;
+}
+header nav ul li{
+  width:98%;
+  border-bottom:1px solid #fff;
+  line-height:40px;
+  margin-bottom:5px;
+  text-indent:20px;
+}
+header nav a{
+  display:block;
+  color:#fff;
+  text-transform: uppercase;
+}
+header nav ul li:first-child{text-align:right;padding-right:20px;}
+header nav ul li:first-child a{display:inline-block;}
+
+/* 로그인 폼 서식 */
+.login-container {
+  padding:120px 0px;
   text-align: center;
 }
-
-header i.fa-bars {
-  padding-right: 20px;
+.login-container label{
+  display:none;
+}
+.input-box {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 240px;
+  border: 1px solid #ccc;
 }
 
-header i.fa-user {
-  padding-left: 20px;
+.login-button {
+  width:260px;
+  padding: 10px 20px;
+  background-color:#8d6634;
+  color: white;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.btn-group{padding-top:16px}
+.btn-group a{
+  margin:0px 10px;
+  font-size:0.9rem;
 }
 
-.toggle_nav {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  background: rgba(0, 0, 0, .7);
-  width: 100%;
-  height: 100%;
-  color: #fff;
-  font-size: 15px;
-  transition: 0.5s;
-}
-
-.toggle_nav nav a {
-  color: #fff;
-  position: absolute;
-  top: 35%;
-  left: 20%;
-}
-
-.toggle_nav nav a:last-child {
-  color: #fff;
-  position: absolute;
-  top: 35%;
-  left: 30%;
-}
-
-.toggle_menu {
-  position: absolute;
-  top: 20%;
-  left: 20%;
-}
-
-.toggle_menu>li {
+/* 회원가입폼 */
+.join-button {
+  width:260px;
+  padding: 10px 20px;
+  background-color:#ac1e1e;
+  color: white;
+  border: none;
+  margin-top: 10px;
   cursor: pointer;
 }
 
 
-
-
-
-
-
-
-
-main {
-  padding: 20px 0px;
+footer{
+  background:var(--base_txtColor);
+  color:#fff;
 }
-
-footer {
-  background: var(--baxe_txtColor);
-  color: #fff;
-}
-
-footer>address {
-  font-style: normal;
-  text-align: center;
-  line-height: 40px;
+footer > address{
+  font-style:normal;
+  text-align:center;line-height:40px;
 }
